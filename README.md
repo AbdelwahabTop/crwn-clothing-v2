@@ -1,4 +1,5 @@
-
+# Firebase notea
+auth: is a singleton because it keeps track of the authentication state of the entire application as the user signs in through different means and methods
 
 
 
