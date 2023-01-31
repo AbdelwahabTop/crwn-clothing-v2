@@ -17,7 +17,7 @@ const Category = () => {
 
   useEffect(() => {
     setProducts(categoriesMap[category]);
-  }, [category, categoriesMap]);
+  }, [category, categoriesMap]);  
 
   return (
     <Fragment>
