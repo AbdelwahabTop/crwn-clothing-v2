@@ -5,7 +5,7 @@ export type ActionWithPayload<T, P> = {
   payload: P;
 };
 
-export type Action<T> = {
+export type Action<T> = {  
   type: T;
 };
 
