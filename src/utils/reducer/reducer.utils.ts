@@ -17,7 +17,7 @@ export function withMatcher(actionCreator: Function) {
       return action.type === type
     }
   })
-}
+};
 
 export type ActionWithPayload<T, P> = {
   type: T;
