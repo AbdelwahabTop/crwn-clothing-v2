@@ -54,7 +54,7 @@ export type ObjectToAdd = {
   title: string;
 }
 
-export const addCollectionAndDocuments = async <T extends ObjectToAdd (
+export const addCollectionAndDocuments = async <T extends ObjectToAdd> (
   collectionKey: string,
   objectsToAdd: T[],
 ): Promise<void> => {

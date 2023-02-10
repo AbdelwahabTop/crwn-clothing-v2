@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { selectCartTotal } from "../../store/cart/cart.selector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 
-import { emptyCartItems } from "../../store/cart/cart.action";
+// import { emptyCartItems } from "../../store/cart/cart.action";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
@@ -61,7 +61,7 @@ const PaymentForm = () => {
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
         alert("Payment Successful");
-        dispatch(emptyCartItems());
+        // dispatch(emptyCartItems());
       }
     }
   };

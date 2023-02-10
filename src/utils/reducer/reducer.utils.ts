@@ -13,11 +13,11 @@ export function withMatcher(actionCreator: Function) {
   const type = actionCreator().type;
   return Object.assign(actionCreator, {
     type,
-    math(action: AnyAction) {
+    match(action: AnyAction) {
       return action.type === type
-    }
-  })
-};
+    },
+  });
+}
 
 export type ActionWithPayload<T, P> = {
   type: T;
