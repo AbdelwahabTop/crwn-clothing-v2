@@ -10,7 +10,7 @@ import {
 
 export type CategoriesState = {
   readonly categories: Category[];
-  readonly isLoading: Boolean;
+  readonly isLoading: Boolean;  
   readonly error: Error | null;
 };
 
