@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 
 export const ProductCartContainer = styled.div`
@@ -28,6 +29,26 @@ export const ProductCartContainer = styled.div`
       opacity: 0.85;
       display: flex;
     }
+  }
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    button {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+      &:hover {
+        img {
+          opacity: unset;
+        }
+        button {
+          opacity: unset;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    width: 80vw;
   }
 `;
 
