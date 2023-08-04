@@ -20,6 +20,7 @@ import {
   getCurrentUser,
   createUserDocumentFromAuth,
   signInWithGooglePopup,
+  signInWithGoogleRedirect,
   signInAuthUserWithEmailAndPassword,
   createAuthUserWithEmailAndPassword,
   signOutUser,
@@ -48,7 +49,7 @@ export function* getSnapshotFromUserAuth(
 
 export function* signInWithGoogle() {
   try {
-    const { user } = yield* call(signInWithGooglePopup);
+    const { user } = yield* call(signInWithGoogleRedirect);
     yield* call(getSnapshotFromUserAuth, user);
   } catch (error) {
     yield* put(signInFailed(error as Error));
@@ -112,7 +113,9 @@ export function* signOut() {
   }
 }
 
-export function* signInAfterSignUp({ payload: { user, additionalDetails } }: SignUpSuccess) {
+export function* signInAfterSignUp({
+  payload: { user, additionalDetails },
+}: SignUpSuccess) {
   yield* call(getSnapshotFromUserAuth, user, additionalDetails);
 }
 
